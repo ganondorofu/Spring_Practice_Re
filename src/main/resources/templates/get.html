@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>データ表示</title>
+</head>
+<body>
+    <h1>データ表示するっピ！</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- testsリストを繰り返し表示 -->
+            <tr th:each="test : ${tests}">
+                <td th:text="${test.id}"></td>
+                <td th:text="${test.name}"></td>
+            </tr>
+        </tbody>
+    </table>
+    <button onclick="location.href='/'">戻る</button> <!-- メインページに戻るボタン -->
+</body>
+</html>
