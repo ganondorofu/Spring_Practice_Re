@@ -7,5 +7,11 @@
 </head>
 <body>
     <h1>thymeleafのテスト</h1>
-</body>
+    <button onclick="location.href='/get'">なんかを取得</button><br>
+    <form action="/add" method="post">
+        <label for="name">なめ:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <button type="submit">なんかを投稿</button>
+    </form>
+</body>            
 </html>
