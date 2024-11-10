@@ -48,4 +48,12 @@ public class MainController {
         testService.saveTest(name);
         return "redirect:/get"; // データ一覧ページにリダイレクト
     }
+    
+    // データ編集の処理
+    @PostMapping("/edit")
+    public String editTest(@RequestParam("id") Integer id, @RequestParam("name") String name) {
+        // idとnameをTestServiceに渡して更新
+        testService.editTest(id, name);
+        return "redirect:/get"; // データ一覧ページにリダイレクト
+    }
 }
