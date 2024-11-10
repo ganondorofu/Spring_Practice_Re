@@ -39,4 +39,14 @@ public class TestService {
             throw new IllegalArgumentException("指定されたIDのTestエンティティは存在しません。");
         }
     }
+    
+    // 特定のIDのTestエンティティを削除するメソッド
+    public void deleteTest(Integer id) {
+        // idに基づいてエンティティの存在を確認し、存在する場合に削除
+        if (testRepository.existsById(id)) {
+            testRepository.deleteById(id); // データベースから削除
+        } else {
+            throw new IllegalArgumentException("指定されたIDのTestエンティティは存在しません。");
+        }
+    }
 }
